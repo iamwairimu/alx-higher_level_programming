@@ -2,7 +2,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stddef.h>
-
+/**
+ * print_python_list_info - print basic info
+ * @p: pyobject list
+ */
 void print_python_list_info(PyObject *p)
 {
 	int size, alloc, i;
@@ -16,6 +19,9 @@ void print_python_list_info(PyObject *p)
 
 	for (i = 0; i < size; i++)
 	{
-		printf("Element %d: %s\n", i, Py_TYPE(obj)->tp_name);
+		printf("Element %d: ", i);
+
+		obj = PyList_GetItem(p, i);
+		printf("%s\n", Py_TYPE(obj)->tp_name);
 	}
 }
