@@ -5,7 +5,7 @@ if (!parseInt(x)) {
   console.log('Missing number of occurrences');
 } else {
   while (j < x) {
-	  console.log('C is fun');
-	  j++;
+    console.log('C is fun');
+    j++;
   }
 }
